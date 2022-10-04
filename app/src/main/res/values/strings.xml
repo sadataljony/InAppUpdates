@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">In-app updates</string>
+    <string name="app_content">
+        Steps need to follow:\n\n
+        1. Add INTERNET permission in AndroidManifest.xml\n\n
+        2. Add \n\n"implementation 'com.google.android.play:core:1.10.3'\n\n" in dependencies in build.gradle(Module)\n\n
+        3. Add AppUpdater.kt class in your project\n\n
+        4. Initialize AppUpdater class in your Splash/Login/Main/Home Activity like this \n\nprivate lateinit var appUpdater: AppUpdater\n\n
+        5. Add updateApp() function in onCreate()\n\n
+        6. Add\n\nappUpdater = AppUpdater(this)\nappUpdater.updateApp()\n\nin updateApp() function\n\n
+        7. Add\n\nappUpdater.stop()\n\nin onStop() function\n\n
+        8. App should be downloaded from Google Play Store\n\n
+        9. Force App Update only work for release apk/aab(signed with keystore) with lower versionCode than Google Play Store App versionCode
+    </string>
+</resources>
