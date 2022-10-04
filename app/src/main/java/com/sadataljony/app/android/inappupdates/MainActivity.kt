@@ -23,4 +23,5 @@ class MainActivity : AppCompatActivity() {
         appUpdater.stop()
         super.onStop()
     }
+
 }
